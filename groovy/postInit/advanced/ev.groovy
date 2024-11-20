@@ -1,0 +1,142 @@
+import mods.gregtech.assembler;
+import mods.gregtech.assembly_line;
+crafting.shapedBuilder()
+    .replace()
+    .output(item('gregtech:multiblock_casing', 3))
+    .matrix('ZLZ','ZFZ','ZMZ')
+    .key('Z',ore('circuitIv'))
+    .key('L',ore('circuitEv'))
+    .key('F',ore('frameGtTitanium'))
+    .key('M',metaitem('gregtech:electric.motor.ev'))
+    .register()
+crafting.shapedBuilder()
+    .replace()
+    .output(item('gregtech:multiblock_casing', 4))
+    .matrix('PGP','AFA','PGP')
+    .key('P',ore('plateSteel'))
+    .key('G',ore('gearTungsten'))
+    .key('F',ore('frameGtTitanium'))
+    .key('A',metaitem('gregtech:robot.arm.ev'))
+    .register()
+crafting.shapedBuilder()
+    .replace()
+    .output(metaitem('gregtech:assembly_line'))
+    .matrix('CAC','ZHZ','CAC')
+    .key('C',item('gregtech:multiblock_casing', 3))
+    .key('A',metaitem('gregtech:robot.arm.ev'))
+    .key('Z',ore('circuitIv'))
+    .key('H',metaitem('gregtech:hull.ev'))
+    .register()
+//电动马达
+crafting.remove("gregtech:electric_motor_iv")
+crafting.remove("gregtech:electric_piston_iv")
+crafting.remove("gregtech:conveyor_module_iv")
+crafting.remove("gregtech:robot_arm_iv")
+crafting.remove("gregtech:electric_pump_iv")
+crafting.remove("gregtech:sensor_iv")
+crafting.remove("gregtech:emitter_iv")
+crafting.remove("gregtech:field_generator_iv")
+
+assembler.removeByInput(30, [metaitem('cableGtDoubleTungsten') * 2, 
+metaitem('stickTungstenSteel') * 2, metaitem('stickNeodymiumMagnetic'), 
+metaitem('wireGtDoubleGraphene') * 4], null)
+
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:electric.motor.iv'))
+    .inputs(ore('stickLongNeodymiumMagnetic'),ore('stickLongTungstenSteel')*2,
+        ore("ringTungstenSteel")*2,ore("roundTungstenSteel")*2,
+        ore("wireFineGraphene")*32,ore("cableGtDoubleTungsten")*2)
+    .fluidInputs(fluid("soldering_alloy")*144,fluid("lubricant")*250)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:electric.motor.ev')).EUt(1920)})
+    .buildAndRegister()
+//活塞
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:electric.piston.iv'))
+    .inputs(metaitem('gregtech:electric.motor.iv'),
+        ore('plateTungstenSteel')*4,ore('ringTungstenSteel')*4,
+        ore('roundTungstenSteel')*16,ore('stickTungstenSteel')*4
+    )
+    .fluidInputs(fluid("soldering_alloy")*144,fluid("lubricant")*250)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:electric.piston.ev')).EUt(1920)})
+    .buildAndRegister()
+//泵
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:electric.pump.iv'))
+    .inputs(metaitem('gregtech:electric.motor.iv'),
+        ore('pipeNormalFluidTungstenSteel'),ore('plateTungstenSteel')*2,
+        ore('screwTungstenSteel')*8,ore('ringSiliconeRubber')*4,
+        ore('rotorTungstenSteel'),ore('cableGtSingleTungsten')*2
+    )
+    .fluidInputs(fluid("soldering_alloy")*144,fluid("lubricant")*250)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:electric.pump.ev')).EUt(1920)})
+    .buildAndRegister()
+//传送带
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:conveyor.module.iv'))
+    .inputs(metaitem('gregtech:electric.motor.iv'),
+        ore('plateTungstenSteel')*2,ore('ringTungstenSteel')*4,
+        ore('roundTungstenSteel')*16,ore('screwTungstenSteel')*4,
+        ore('cableGtSingleTungsten')*2
+    )
+    .fluidInputs(fluid("soldering_alloy")*144,fluid("lubricant")*250,fluid('styrene_butadiene_rubber')*1152)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('conveyor.module.ev')).EUt(1920)})
+    .buildAndRegister()
+//机械臂
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:robot.arm.iv'))
+    .inputs(ore('stickLongTungstenSteel'),ore('gearTungstenSteel'),
+        ore('gearSmallTungstenSteel')*3,metaitem('gregtech:electric.motor.iv')*2,
+        metaitem('gregtech:electric.piston.iv'),ore('circuitIv'),ore('circuitEv')*2,
+        ore('circuitHv'),ore('cableGtSingleTungsten')*4
+    )
+    .fluidInputs(fluid("soldering_alloy")*576,fluid("lubricant")*250)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:robot.arm.iv')).EUt(1920)})
+    .buildAndRegister()
+//传感器
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:sensor.iv'))
+    .inputs(ore('frameGtTungstenSteel'),metaitem('gregtech:electric.motor.iv'),
+        ore('plateIridium')*4,metaitem('quantumstar'),
+        ore('circuitIv')*2,ore('foilTungsten')*64,ore('foilTungsten')*32,
+        ore('cableGtSingleTungsten')*4
+    )
+    .fluidInputs(fluid("soldering_alloy")*288)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:sensor.ev')).EUt(1920)})
+    .buildAndRegister()
+//发射器
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:emitter.iv'))
+    .inputs(ore('frameGtTungstenSteel'),metaitem('gregtech:electric.motor.iv'),
+        ore('stickLongIridium')*4,metaitem('quantumstar'),
+        ore('circuitIv')*2,ore('foilTungsten')*64,ore('foilTungsten')*32,
+        ore('cableGtSingleTungsten')*4
+    )
+    .fluidInputs(fluid("soldering_alloy")*288)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:sensor.ev')).EUt(1920)})
+    .buildAndRegister()
+//力场发生器
+assembly_line.recipeBuilder()
+    .outputs(metaitem('gregtech:field.generator.iv'))
+    .inputs(ore('frameGtTungstenSteel'),ore('plateTungstenSteel')*6,
+        metaitem('quantumstar'),metaitem('gregtech:emitter.iv')*2,
+        ore("wireFineSamariumIronArsenicOxide")*64,ore("wireFineSamariumIronArsenicOxide")*64,
+        ore('cableGtSingleTungsten')*4)
+    .fluidInputs(fluid("soldering_alloy")*576)
+    .EUt(1920)
+    .duration(600)
+    .scannerResearch({it.researchStack(metaitem('gregtech:field.generator.ev')).EUt(1920)})
+    .buildAndRegister()

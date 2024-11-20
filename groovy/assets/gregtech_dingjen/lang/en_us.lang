@@ -1,0 +1,27 @@
+item.gregtech_dingjen.twilight_gem.name=Twilight Gem
+item.gregtech_dingjen.lich_bone.name=Lich Bone
+item.gregtech_dingjen.snow_queen_blood.name=Snow Queen Blood
+item.gregtech_dingjen.fiery_chop.name=Fiery Chop
+item.gregtech_dingjen.tentacle.name=Tentacle
+item.gregtech_dingjen.sad_slag.name=Sad Slag
+
+gregtech_dingjen.material.ancient_debris=Ancient Debris
+gregtech_dingjen.material.netherite=Netherite
+gregtech_dingjen.material.manyullyn=Manyullyn
+gregtech_dingjen.material.amber=Amber
+gregtech_dingjen.material.tanzanite=tanzanite
+gregtech_dingjen.material.galaxy=Gem of Galaxy
+gregtech_dingjen.material.terrestrial_artifact=Terrestrial Artifact
+gregtech_dingjen.material.aquamarine=Aquamarine
+
+gregtech_dingjen.material.cracker_graham_ungraded=Hardened Biscuit
+gregtech_dingjen.material.matter_graham_hot=Hot Biscuit
+gregtech_dingjen.material.matter_graham=Raw Biscuit
+
+projectreflection.veins.ore.aquamarine=Aquamarine Vein
+projectreflection.veins.ore.emerald=Emerald Vein
+
+item.gregtech_dingjen.micro_assembly.name=Microprocessor Assembly
+item.gregtech_dingjen.micro_computer.name=Microprocessor Supercomputer
+item.gregtech_dingjen.computer.name=Processor Supercomputer
+
