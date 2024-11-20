@@ -1,0 +1,8 @@
+{
+  "inventory": {
+    "0:0": "akashictome:tome,1,0,{\"akashictome:data\":{openblocks:{id:\"openblocks:info_book\",Count:1,Damage:0s,tag:{\"akashictome:definedMod\":\"openblocks\"}},forestry:{id:\"forestry:book_forester\",Count:1,Damage:0s,tag:{\"akashictome:definedMod\":\"forestry\"}},betterquesting:{id:\"betterquesting:quest_book\",Count:1,Damage:0s,tag:{\"akashictome:definedMod\":\"betterquesting\"}},theoneprobe:{id:\"theoneprobe:probenote\",Count:1,Damage:0s,tag:{\"akashictome:definedMod\":\"theoneprobe\"}},astralsorcery:{id:\"astralsorcery:itemjournal\",Count:1,Damage:0s,tag:{\"akashictome:definedMod\":\"astralsorcery\"}}}}",
+    "0:3": "gregtech:meta_item_1,1,465",
+    "0:1": "enigmaticlegacy:the_acknowledgment",
+    "0:2": "enigmaticlegacy:enigmatic_amulet,1,3"
+  }
+}

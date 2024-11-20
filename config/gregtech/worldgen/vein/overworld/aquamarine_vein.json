@@ -1,0 +1,42 @@
+{
+  "name": "projectraflection.veins.ore.aquamarine",
+  "weight": 0,
+  "density": 0.3,
+  "min_height": 5,
+  "max_height": 20,
+
+  "generator": {
+    "type": "layered",
+    "radius": [
+      14,
+      16
+    ]
+  },
+  "filler": {
+    "type": "layered",
+    "values": [
+      {
+        "primary": "ore:aquamarine"
+      },
+      {
+        "secondary": "ore:aquamarine"
+      },
+      {
+        "between": {
+          "block": "minecraft:monster_egg",
+          "variant": "stone"
+      }
+      },
+      {
+        "sporadic": "ore:emerald"
+      }
+    ]
+  },
+"biome_modifier": {
+    "type": "biome_map",
+    "ocean": 60,
+    "frozen_ocean": 60,
+    "deep_ocean": 80,
+    "river":40
+  }
+}

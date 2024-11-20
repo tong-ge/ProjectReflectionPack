@@ -1,0 +1,57 @@
+item.contenttweaker.raw_chip_t1.name=Raw Electronic Parts
+item.contenttweaker.raw_chip_t2.name=Raw Integrated Parts
+item.contenttweaker.raw_chip_t3.name=Raw Processor Parts
+item.contenttweaker.raw_chip_t4.name=Raw Nano Parts
+item.contenttweaker.raw_chip_t5.name=Raw Quantum Parts
+item.contenttweaker.raw_chip_t6.name=Raw Crystal Parts
+
+item.contenttweaker.component_t1.name=Integrated Component
+item.contenttweaker.component_t2.name=Processor Component
+item.contenttweaker.component_t3.name=Nano Component
+item.contenttweaker.component_t4.name=Quantum Component
+item.contenttweaker.component_t5.name=Crystal Component
+item.contenttweaker.component_t6.name=Wetware Component
+
+item.contenttweaker.kunzite_chip.name=Kunzite Chip
+item.contenttweaker.kunzite_chip_improved.name=Improved Kunzite Chip
+
+gregtech.material.thaumium=Thaumium
+gregtech.material.void=Void Metal
+gregtech.material.fiery=Fiery
+gregtech.material.knightmetal=Knightmetal
+gregtech.material.dreadium=Dreadium
+gregtech.material.ethaxium=Ethaxium
+gregtech.material.ethaxium_alloy=Ethaxium Alloy
+gregtech.material.mana=Primal Mana
+gregtech.material.abyssalnite=Abyssalnite
+gregtech.material.liquified_coralium=Coralium
+gregtech.material.uranium_enriched=Enriched Uranium
+gregtech.material.limestone=Limestone
+gregtech.material.kunzite=Kunzite
+
+gregtech.material.draconium=Draconium
+gregtech.material.draconium_awakened=Awakened Draconium
+gregtech.material.pyrotheum=Pyrotheum
+gregtech.material.cryotheum=Cryotheum
+gregtech.material.petrotheum=Petrotheum
+gregtech.material.aerotheum=Aerotheum
+gregtech.material.mithril=Mithril
+gregtech.material.mithrillium=Crude Mithril
+gregtech.material.adamantium=Adamantium
+gregtech.material.adaminite=Crude Adamantium
+gregtech.material.vibranium=Vibranium
+gregtech.material.mithminite=Mithminite
+gregtech.material.naga=Naga Alloy
+gregtech.material.energium=Energium
+gregtech.material.jungalloy=JungAlloy
+
+recipemap.primitive_mixer.name=Primitive Mixing
+recipemap.primitive_assembler.name=Primitive Assembling
+
+devtech.machine.primitive_mixer.bronze.name=Primitive Mixer
+devtech.machine.primitive_assembler.bronze.name=Primitive Assembler
+
+fluid.depleted_mithril_solution=Depleted Mithril Solution
+fluid.enriched_mithril_solution=Enriched Mithril Solution
+fluid.depleted_adamantium_solution=Depleted Adamantium Solution
+fluid.enriched_adamantium_solution=Enriched Adamantium Solution

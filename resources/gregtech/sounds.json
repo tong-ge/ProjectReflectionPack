@@ -1,0 +1,11 @@
+{
+    "tick.pulse":{
+        "category":"block",
+        "sounds":[
+            {
+                "name":"gregtech:pulse",
+                "stream": false
+            }
+        ]
+    }
+}
