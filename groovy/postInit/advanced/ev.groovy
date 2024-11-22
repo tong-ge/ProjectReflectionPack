@@ -1,5 +1,6 @@
 import mods.gregtech.assembler;
 import mods.gregtech.assembly_line;
+import mods.gregtech.polarizer;
 crafting.shapedBuilder()
     .replace()
     .output(item('gregtech:multiblock_casing', 3))
@@ -139,4 +140,11 @@ assembly_line.recipeBuilder()
     .EUt(1920)
     .duration(600)
     .scannerResearch({it.researchStack(metaitem('gregtech:field.generator.ev')).EUt(1920)})
+    .buildAndRegister()
+
+polarizer.recipeBuilder()
+    .outputs(ore('gemLapotronPrecharged')[0])
+    .inputs(ore('gemLapotron'))
+    .EUt(1920)
+    .duration(13021)
     .buildAndRegister()

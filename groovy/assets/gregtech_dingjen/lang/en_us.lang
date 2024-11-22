@@ -13,10 +13,33 @@ gregtech_dingjen.material.tanzanite=tanzanite
 gregtech_dingjen.material.galaxy=Gem of Galaxy
 gregtech_dingjen.material.terrestrial_artifact=Terrestrial Artifact
 gregtech_dingjen.material.aquamarine=Aquamarine
+gregtech_dingjen.material.polymetal=Polymetal
+gregtech_dingjen.material.abyssium=Abyssium
+gregtech_dingjen.material.pulsating_iron=Pulsating Iron
+gregtech_dingjen.material.pulsating_crystal=Pulsating Crystal
+gregtech_dingjen.material.pink_slime=Pink Slime
+gregtech_dingjen.material.crystalline_pink_slime=Crystalline Pink Slime
+gregtech_dingjen.material.prismarine=Prismarine
+gregtech_dingjen.material.gallite=Gallite
+gregtech_dingjen.material.alumina=Alumina
+gregtech_dingjen.material.sodium_aluminate=Sodium Aluminate
+gregtech_dingjen.material.sodium_aluminate_solution=Sodium Aluminate Solution
+gregtech_dingjen.material.aluminium_hydroxide=Aluminium Hydroxide
+gregtech_dingjen.material.raw_graphite=Raw Graphite
+gregtech_dingjen.material.enchanted_metal=Enchanted Metal
+gregtech_dingjen.material.evil_metal=Evil Metal
+gregtech_dingjen.material.dark_steel=Dark Steel
+gregtech_dingjen.material.end_steel=End Steel
+gregtech_dingjen.material.chorus_fruit=Chorus Fruit
+gregtech_dingjen.material.melodic_alloy=Melodic Alloy
+
+gregtech_dingjen.material.metallic_platinum=Metallic Platinum
+gregtech_dingjen.material.metallic_palladium=Metallic Palladium
 
 gregtech_dingjen.material.cracker_graham_ungraded=Hardened Biscuit
 gregtech_dingjen.material.matter_graham_hot=Hot Biscuit
 gregtech_dingjen.material.matter_graham=Raw Biscuit
+gregtech_dingjen.material.lapotron_precharged=Precharged Lapotron
 
 projectreflection.veins.ore.aquamarine=Aquamarine Vein
 projectreflection.veins.ore.emerald=Emerald Vein
@@ -25,3 +48,4 @@ item.gregtech_dingjen.micro_assembly.name=Microprocessor Assembly
 item.gregtech_dingjen.micro_computer.name=Microprocessor Supercomputer
 item.gregtech_dingjen.computer.name=Processor Supercomputer
 
+projectreflection.material.sirinium=Sirinium

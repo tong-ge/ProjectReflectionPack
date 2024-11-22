@@ -1,0 +1,41 @@
+import mods.gregtech.autoclave;
+import mods.gregtech.chemical_reactor;
+import mods.gregtech.electrolyzer;
+def dehydrator=recipemap('dehydrator')
+autoclave.recipeBuilder()
+    .inputs(ore('dustBauxite')*15,ore('dustSodiumHydroxide')*18)//3*Al2O3(5)+6*NaOH(3)
+    .fluidInputs(fluid('water')*9000)//9H2O(3)
+    .outputs(ore('dustRutile')[0])
+    .fluidOutputs(fluid('sodium_aluminate_solution')*6000)//6*NaAl(OH)4(10)
+    .EUt(30)
+    .duration(300)
+    .buildAndRegister()
+chemical_reactor.recipeBuilder()
+    .fluidInputs(fluid('sodium_aluminate_solution')*1000,fluid('carbon_dioxide')*1000)//NaAl(OH)4+CO2
+    .outputs(ore('dustAluminiumHydroxide')[0]*7,ore('dustSodiumBicarbonate')[0]*6)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+dehydrator.recipeBuilder()
+    .inputs(ore('dustAluminiumHydroxide')*14)
+    .outputs(ore('dustAlumina')[0]*5)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+dehydrator.recipeBuilder()
+    .fluidInputs(fluid('sodium_aluminate_solution'))
+    .outputs(ore('dustSodiumAluminate')[0])
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister()
+// 铝粉 * 2
+electrolyzer.removeByInput(30, [ore('dustAlumina')[0] * 5], null)
+
+electrolyzer.recipeBuilder()
+    .inputs(ore('dustAlumina')*10,ore('stickGraphite')*6)
+    .fluidInputs(fluid('cryolite')*1440)
+    .outputs(ore('gemFlawedCryolite')[0]*16)
+    .fluidOutputs(fluid('aluminium')*576,fluid('carbon_dioxide')*3000)
+    .EUt(30)
+    .duration(9500)
+    .buildAndRegister();

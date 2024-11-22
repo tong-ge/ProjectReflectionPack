@@ -71,6 +71,11 @@ mods.gregtech.lateMaterialEvent(EventPriority.NORMAL,{
     material('samarium_iron_arsenic_oxide').addFlags('generate_fine_wire')
     material('bone').addIngot()
     material('bone')addFlags('no_smelting','no_smashing','no_working','generate_plate','generate_rod','exclude_block_crafting_recipes')
+
+    material('brick').setFormula('Na4Li2Al4Si4O17',true)
+    material('brick').addFlags('disable_decomposition');
+    material('clay').setFormula('(Na4Li2Al4Si4O17)(H2O)12',true)
+    material('glowstone').setFormula('CaF2',true);
     disableDecomposition()
     replaceOreByProducts()
 })

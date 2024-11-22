@@ -1,6 +1,8 @@
 import static gregtech.api.unification.ore.OrePrefix.*
 import gregtech.api.unification.material.properties.PropertyKey
 import gregtech.api.unification.material.info.MaterialFlag
+import gregtech.api.fluids.FluidBuilder
+import gregtech.api.fluids.store.FluidStorageKey
 def onMaterialEvent={
     def ancient_debris=materialBuilder(32000,"ancient_debris")
         .color(0x6e505a)
@@ -160,13 +162,15 @@ def onMaterialEvent={
         .iconSet('metallic')
         .build()
     metallic_palladium.setFormula('??Pd??')
+    
     def alumina=materialBuilder(32022,"alumina")
         .dust()
         .color(0xc8c8c8)
         .components(material('aluminium')*2,material('oxygen')*3)
         .flags('disable_decomposition')
         .build()
-    alumina.setFormula('γ-Al2O3')
+    alumina.setFormula('γ-Al2O3',true)
+    dust.setIgnored(alumina)
     def sodium_aluminate=materialBuilder(32023,"sodium_aluminate")
         .dust()
         .color(0xf0f0f0)
@@ -179,14 +183,14 @@ def onMaterialEvent={
         .components(sodium_aluminate*1,material('water')*2)
         .flags('disable_decomposition')
         .build();
-    sodium_aluminate_solution.setFormula('Na[Al(OH)4]')
+    sodium_aluminate_solution.setFormula('Na[Al(OH)4]',true)
     def aluminium_hydroxide=materialBuilder(32025,"aluminium_hydroxide")
         .dust()
         .color(0xf0f0f0)
         .components(alumina*1,material('water')*3)
         .flags('disable_decomposition')
         .build()
-    aluminium_hydroxide.setFormula('Al(OH)3')
+    aluminium_hydroxide.setFormula('Al(OH)3',true)
     def raw_graphite=materialBuilder(32026,'raw_graphite')
         .polymer()
         .color(0xc8c8c8)
@@ -248,6 +252,21 @@ def onMaterialEvent={
         .components(end_steel*1,chorus_fruit*1)
         .flags('generate_plate','generate_rod','generate_gear')
         .build()
-    
+    def lapotron_precharged=materialBuilder(32033,'lapotron_precharged')
+        .gem()
+        .color(0x193bff)
+        .flags('no_unification','disable_decomposition','explosive')
+        .iconSet('magnetic')
+        .components(material('lapotron')*1)
+        .build()
+    gemChipped.setIgnored(lapotron_precharged)
+    def cryolite=materialBuilder(32034,'cryolite')
+        .gem()
+        .color(0xcdcdff)
+        .liquid(new FluidBuilder().temperature(1220))
+        .iconSet('diamond')
+        .flags('disable_decomposition','crystallizable')
+        .components(material('sodium')*3,material('aluminium')*1,material('fluorine')*6)
+        .build()    
 }
 mods.gregtech.materialEvent(onMaterialEvent);

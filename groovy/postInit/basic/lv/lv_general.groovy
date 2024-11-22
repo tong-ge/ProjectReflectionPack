@@ -1,11 +1,9 @@
 import mods.gregtech.mixer;
-import mods.gregtech.autoclave;
 import mods.gregtech.assembler;
 import mods.gregtech.centrifuge;
 import mods.extendedcrafting.table_crafting;
 import mods.gregtech.alloy_smelter;
 import mods.gregtech.brewery;
-import mods.gregtech.chemical_reactor;
 import mods.gregtech.circuit_assembler;
 mixer.recipeBuilder()
     .fluidOutputs(fluid("gtfo_butter")*1000)
@@ -58,20 +56,6 @@ alloy_smelter.recipeBuilder()
     .EUt(30)
     .duration(200)
     .buildAndRegister();
-autoclave.recipeBuilder()
-    .inputs(ore('dustBauxite')*15,ore('dustSodiumHydroxide')*18)//3*Al2O3(5)+6*NaOH(3)
-    .fluidInputs(fluid('water')*9000)//9H2O(3)
-    .outputs(ore('dustRutile')[0])
-    .fluidOutputs(fluid('sodium_aluminate_solution')*6000)//6*NaAl(OH)4(10)
-    .EUt(30)
-    .duration(300)
-    .buildAndRegister()
-chemical_reactor.recipeBuilder()
-    .fluidInputs(fluid('sodium_aluminate_solution')*1000,fluid('carbon_dioxide')*1000)//NaAl(OH)4+CO2
-    .outputs(ore('dustAluminiumHydroxide')[0]*7,ore('dustSodiumBicarbonate')[0]*6)
-    .EUt(30)
-    .duration(200)
-    .buildAndRegister()
 // NAND芯片
 
 circuit_assembler.recipeBuilder()

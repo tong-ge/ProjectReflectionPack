@@ -13,6 +13,25 @@ gregtech_dingjen.material.tanzanite=坦桑石
 gregtech_dingjen.material.galaxy=银河宝石
 gregtech_dingjen.material.terrestrial_artifact=天地宝晶
 gregtech_dingjen.material.aquamarine=海蓝宝石
+gregtech_dingjen.material.polymetal=多金属
+gregtech_dingjen.material.abyssium=深海金属
+gregtech_dingjen.material.pulsating_iron=脉冲铁
+gregtech_dingjen.material.pulsating_crystal=充能水晶
+gregtech_dingjen.material.pink_slime=粉红史莱姆
+gregtech_dingjen.material.crystalline_pink_slime=晶化粉红史莱姆
+gregtech_dingjen.material.prismarine=海晶石
+gregtech_dingjen.material.gallite=硫镓铜矿
+gregtech_dingjen.material.alumina=γ-氧化铝
+gregtech_dingjen.material.sodium_aluminate=偏铝酸钠
+gregtech_dingjen.material.sodium_aluminate_solution=四羟基合铝酸钠
+gregtech_dingjen.material.aluminium_hydroxide=氢氧化铝
+gregtech_dingjen.material.raw_graphite=生石墨
+gregtech_dingjen.material.enchanted_metal=附魔金属
+gregtech_dingjen.material.evil_metal=恶魔灌注铁
+gregtech_dingjen.material.dark_steel=玄钢
+gregtech_dingjen.material.end_steel=末地钢
+gregtech_dingjen.material.chorus_fruit=紫颂果
+gregtech_dingjen.material.melodic_alloy=旋律合金
 
 gregtech_dingjen.material.metallic_platinum=铂金属
 gregtech_dingjen.material.metallic_palladium=钯金属
@@ -20,6 +39,7 @@ gregtech_dingjen.material.metallic_palladium=钯金属
 gregtech_dingjen.material.cracker_graham_ungraded=硬化的饼干
 gregtech_dingjen.material.matter_graham_hot=热饼干
 gregtech_dingjen.material.matter_graham=生饼干坯料
+gregtech_dingjen.material.lapotron_precharged=带电兰波顿
 
 projectreflection.veins.ore.aquamarine=海蓝宝石矿脉
 projectreflection.veins.ore.emerald=绿宝石矿脉
@@ -27,5 +47,7 @@ projectreflection.veins.ore.emerald=绿宝石矿脉
 item.gregtech_dingjen.micro_assembly.name=微型处理器集群
 item.gregtech_dingjen.micro_computer.name=微型超级计算机
 item.gregtech_dingjen.computer.name=处理器超级计算机
+
+projectreflection.material.sirinium=空律合金
 
 tile.industrialforegoing.pitiful_fuel_generator.name=木料发电机
